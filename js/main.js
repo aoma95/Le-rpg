@@ -1,2 +1,2 @@
-$("main").append("<h1>Le voyage d'un petit asiatique</h1>");
+$("main").append("<h1>l'histoire de Malao</h1>");
 let histoire = new ClassHistoire();

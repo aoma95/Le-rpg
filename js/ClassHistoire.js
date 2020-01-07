@@ -7,8 +7,13 @@ class ClassHistoire {
             "Mais c'est à un autre destin que rêve le jeune garçon. Il passât son temps à regarder par la seule fenêtre les montagnes rocheuses de sa région. S'imaginant visiter chaque recoin à la découverte de lieux tout aussi fascinant les uns que les autres. Mais son père le rappela à l'ordre chaque jour lui en disant que le monde extérieur est peuplé de dragons et de sorciers maléfiques.  \n" +
             "\n" +
             "Comme dans chaque famille, il existe toujours un enfant différent des autres. Malao était celui-là. Il travailla avec son père et ses frères en tant que chaudronnier jusqu'à ses 14ans.  C'est à partir de 15 ans qu'il s'enfuit de la chaudronnerie la journée pour visiter les montagnes de sa région et choisi alors son destin : celui d'aventurier.";
+
         this.choix={"e1c1":["Malao décide de tout raconter à son père","e1c1"],
-            "e1c2":["Malao décide de mentir","e1c2"]
+            "e1c2":["Malao décide de mentir","e1c2"],
+            "e2c1":["Malao refuse d'écouter","e2c1"],
+            "e2c2":["Malao écouta le vieillard","e2c2"],
+            "e3c1":["Partir au combat l'épée au poing pour tuer ses maudits tortionnaires","e3c1"],
+            "e3c2":["Il se rend compte que la discrétion doit être de mise pour cette petite mission","e3c2"]
         };
         this.texte={
             "un":"Un beau jour de soleil, pendant une virée en montagne, Malao s'enfonça dans une grotte de plus en plus sombre, froide et humide. Les dragons faisaient généralement leur nid dans de ce genre d'endroit à l'abris des chausseurs. Petit pas par petit pas il continue son chemin, son souffle et son poux sont de plus en plus fort. Malao ne voyait rien, seule la main sur le mur pouvait l'aider à avancer et à se situer dans la grotte... \n" +
@@ -39,7 +44,40 @@ class ClassHistoire {
                 "\" Comment veux-tu te battre avec une épée si tu ne sais même pas manier tes mains ?\"  \n" +
                 "Celui-ci lui montra un mannequin en bois et lui ordonna de le frapper toute la journée. Bête comme il est, Malao donna tout ce qu'il a dès le début et fit essouffler, épuisé, faible au bout de 5 minutes...  \n" +
                 "Le vieillard lui dit de recommencer mais Malao recommence encore une fois. Encore un coup de bâton, le vieillard lui indique de s’assoir en lotus sur le banc à ses côtés.",
-            "trois":""
+
+            "troisComb":"Malao refuse et essaye de nouveau de se battre contre se mannequin mais en vain. Le vieillard lui donne encore un nouveau coup de bâton, ce qui énerva le jeune homme qui décida de quitter l'entrainement et de rentrer chez lui. Le lendemain, accompagné de son épée, Malao prend le chemin de la montagne et rencontre sur son chemin différentes personnes. Il indique alors être un combattant et suis ses personnes. Ce qu'il ne savait pas c'est que ses personnes l’étaient de nature méchante et avaient une idée bien précise de quoi faire de ce jeune homme. \n" +
+                "\n" +
+                "    Une fois arrivé au campement de ces individus. Malao comprit que c'était un piège et fut encerclé par différents hommes, enfants. Il sort son épée et c'est alors que commence un combat entre lui et ses hommes,",
+            "trois":"Le jeune combattant prit conscience de la sagesse de ce vieillard, il se pose alors en lotus comme demandé mais tomba directement. Le vieil homme resta toujours sans expression, Malao se relève et se pose délicatement. \n" +
+                "   Il demande alors quoi faire ? Aucune réponse, il ferme les yeux et ses alors que le vieillard répond :  \n" +
+                "   \"La respiration fait partie de la première chose à apprendre pour pouvoir combattre dignement sans s'épuiser. Apprend donc à connaitre ta respiration, rentre en harmonie avec ton corps, ta foi, ton esprit.\"  \n" +
+                "   Une longue journée se passe, la nuit tombe et les deux hommes reste là sur le banc. C'est alors que le jeune combattant se dirige vers le mannequin et enchaine les coups sans faiblesse (Force qui passe de 10 à 20, Endurance et résistance de 10 à 40.). Le vieil homme ordonna à Malao de rentrer et de revenir le lendemain."+"Le jeune homme part rejoindre le vieillard pour lui expliquer et lui montrer la carte, celui-ci rentre dans sa maison, des bruits de métaux et de tissus se font entendre. Le vieil homme en ressort accompagné de l'épée et de différents tissus servant de veste pour le voyage. L'homme avança et Malao comprit que celui-ci l'accompagnerait pour son voyage. \n" +
+                "\n" +
+                "Des jours et des jours de marche, le vieillard ne montra aucun signe de faiblesse, Malao ne comprend pas vraiment qui est cet homme et comment il est là ou il en est. \n" +
+                "\n" +
+                "Dans le recoin d'une forêt sombre le vieil homme s'arrête et allume un feu, le jeune homme comprit qu'ils allaient passer la nuit ici. La nuit passe et le jeune homme trouve difficilement le sommeil. Le soleil du lendemain le réveil, Malao range ses affaires et reprend la route accompagnée du vieillard. \n" +
+                "\n" +
+                "Pendant leur voyage, différents bruits se font ressentir, le côté curieux de Malao le fait regarder à droite, à gauche, c'est à ce moment-là qu'il trouve un sanctuaire et décide de s'y rendre. Le vieillard le suit sagement. Une fois arrivé devant, les deux hommes s'assaillent. C'est alors qu'une épaisse fumée apparait de la statue présente dans le sanctuaire... \n" +
+                "\n" +
+                "Plusieurs heures passent et la nuit tombe de nouveau, un petit campement se met de nouveau en place. Malao se met alors en méditation avant de dormir comme sur le banc avec le vieil homme lors de ses premiers jours d'entrainements. \n" +
+                "\n" +
+                "C'est alors que le combattant se réveil et aperçoit une lumière au fond, il se lève et part en cette direction jusqu'au moment oui il observait des hommes avec des cages enfermant des dragons, Malao réfléchit alors :",
+            //a faire
+            "quattreCombat1-1":"Malao part alors au combat sans savoir le nombre d'ennemies, n'y contre qui se battre, il avance doucement puis tombe nez à nez avec l'une de ces personnes.",
+            "quattreCombat1-2":"Malao l'emporte (Gain de force et d'endurance de 10, mais perte de vie 100 à 85). Il enchaine ses pas et avance de nouveau. Deux hommes viennent à lui en sonnant l'alarme.",
+            "quattreCombat1-3":"Le jeune guerrier s'en sort fatiguer (Vie passe de 85 à 30, gain de force de 25) mais ne refuse de rebrousser chemin, il se dirige vers une cage et casse le cadenas pour y laisser sortir les dragons. Il entend un homme courir dans son dos se retourne en tendant sa main et, ne sachant pas gérer sa magie envoie un sort qui lui faire un bon arrière de plusieurs mettre, malheureusement pour lui, des pics en bois se trouvait derrière lui et lui transperças plusieurs fois le corps, ce qui le fit mourir sur le coup.",
+            //a faire
+            "quattre":"C'est alors qu'il avance doucement sur la pointe des pieds tout en regardant le sol pour vérifier qu'il ne rencontre pas de problème, comme précédemment dans la grotte. Au fur et à mesure de son avancé il arrive à ouvrir plusieurs cages, c'est alors que les dragons sortent tous en même temps et attaque les voleurs simultanément. Il observe cette réussite de loin. Bien évidemment le bruit des combats réveils le vieillard qui vient alors taper Malao pour lui rappeler de se tenir droit."+"La nuit tombe à sa fin et le jour se lève, les deux hommes sont prêts à reprendre la route, c'est leur dernier jour de marche avant d'arriver à l'endroit indiquer sur la carte. Le mal aux pieds se fait sentir sur Malao, ainsi que sur le vieillard, qui, malgré son expérience se fait vieux.  \n" +
+                "C'est à la vue des montagnes et des vieux bâtiments construit sur les flancs de montages qu'ils compris qu'ils étaient arrivés. Un grand temple avec d'immense porte s'ouvrit devant eux, comme si leur venu était attendu. \n" +
+                "A l'intérieur, très peu de lumière, des bougies éclaire la pièce, ils avancent avec un air curieux pour Malao, tandis que le vieil homme avance toujours sans aucune réaction. Celui-ci s'avance jusqu'à la statue de bronze, représentant un mage et s'assied devant elle. Malao quant à lui, avance lentement tout en observant ce temple. \n" +
+                "\n" +
+                "Les portes se referment et Malao se retourne au bruit des portes claquantes. Une fois arrivé devant la statue, une voix cassante lui demande de s'assoir, il ne comprend d'où celle-ci sort, mais s'exécute. C'est alors qu’un vieil homme disposant d'une longue barbe arrive d'un coin sombre de la pièce.\n" +
+                "Le vieille homme assis se lève et les deux hommes se serrent dans les bras, tel de vieux amis ne s'étant pas vus depuis de nombreuses années. Les deux vieillards se retournent vers Malao et le mage demande alors à son ami si c'est bien avec lui qu'il est venu. Malao s'interroge sur le \"lui\" prononcer par cet homme. \n" +
+                "\n" +
+                "Celui-ci s'approche alors du jeune homme et lui explique qu'il est le descendant d'un grand sorcier et que coule dans son sang les gènes de ce sorcier. Mais que sans aide, il ne pourrait pas utiliser correctement sa magie et le vieux monsieur, à la barbe grisonnante lui indique être son maitre. \n" +
+                "\n" +
+                "Les jours se suivent et Malao apprend de mieux en mieux à gérer la force de sa magie. Les deux vieux hommes s'unissent pour un combat contre Malao.",
+            "quattre-2":", lui demandant de gagner ce combat, tout en réfléchissant à ses actes, coups."+"Le combat se déroule parfaitement bien, Malao se défend correctement et apprend de nouvelle technique d'esquive, apprend à mieux gérer son stress et sa magie."
 
         };
         this.embranchementZero();
@@ -50,29 +88,64 @@ class ClassHistoire {
         $('main section').append(`<h1>${this.intro}</h1>`);
         $('main section').append("<button class='debut'>Début</button>");
         $(".debut").click(( event => {
-            this.clear();
-            this.embranchementUn();
+            this.clearSection();
+            this.embranchement(`${this.texte.un}`,`${this.choix.e1c1[1]}`,`${this.choix.e1c1[0]}`,`${this.choix.e1c2[1]}`,`${this.choix.e1c2[0]}`);
         }));
     }
 
-    embranchement(texte,classeUn,classedeux,phraseButonUn,PhraseButonDeux){
-        $('main section').append(`<p>${this.texte.un}</p>`);
-        this.generateBouton(`${this.choix.e1c1[1]}`,`${this.choix.e1c2[1]}`,`${this.choix.e1c1[0]}`,`${this.choix.e1c1[0]}`);
+    embranchement(texte,classeUn ="",phraseButonUn="",classedeux ="",PhraseButonDeux=""){
+        $('main section').append(`<p>${texte}</p>`);
+        if(classedeux===""){
+            this.generateBouton(`${classeUn}`,`${phraseButonUn}`,``,``);
+        }
+        else {
+            this.generateBouton(`${classeUn}`,`${phraseButonUn}`,`${classedeux}`,`${PhraseButonDeux}`);
+        }
     }
-    clear(){
+    clearSection(){
         $('main section').empty();
     }
-    generateBouton(classeUn,classeDeux,phraseBoutonUn,phraseBoutonDeux){
+    clearMain(){
+        $('main').empty();
+    }
+    generateBouton(classeUn,phraseBoutonUn,classeDeux="",phraseBoutonDeux=""){
+        if(classeDeux===""){
+            $('main section').append(`<button class="${classeUn}">${phraseBoutonUn}</button>`);
+        }
+        else {
             $('main section').append(`<button class="${classeUn}">${phraseBoutonUn}</button><button class="${classeDeux}">${phraseBoutonDeux}</button>`);
+        }
             this.clicBoutonChoix()
     }
     clicBoutonChoix(){
         $("main section button").click(( event => {
+            this.clearSection();
             if(event.target.className==="e1c2"){
-
+                this.embranchement(`${this.texte.deux}`,`${this.choix.e2c1[1]}`,`${this.choix.e2c1[0]}`,`${this.choix.e2c2[1]}`,`${this.choix.e2c2[0]}`);
             }
             if(event.target.className==="e1c1"){
-
+                this.embranchement(`${this.texte.deuxMort}`,`mort`,`Vous êtes mort !`)
+            }
+            if(event.target.className==="mort"){
+                this.clearMain();
+                this.embranchementZero();
+            }
+            if(event.target.className==="e2c1"){
+                //combat
+                this.embranchement(`${this.texte.troisComb}`,`combat`,`Lancez Combat !`)
+            }
+            if(event.target.className==="e2c2"){
+                //mise a jour compétence
+                this.embranchement(`${this.texte.trois}`,`${this.choix.e3c1[1]}`,`${this.choix.e3c1[0]}`,`${this.choix.e3c2[1]}`,`${this.choix.e3c2[0]}`);
+            }
+            if(event.target.className==="e3c1"){
+                this.embranchement(`${this.texte["quattreCombat1-1"]}`,`combat`,`Lancez Combat !`)
+            }
+            if(event.target.className==="e3c2"){
+                this.embranchement(`${this.texte.quattre}`,`combate3c2`,`Lancez Combat !`)
+            }
+            if(event.target.className==="combate3c2"){
+                //mise a jour compétence
             }
         }));
     }
