@@ -5,3 +5,24 @@
 }
 
 html {font-size: 62.5%}
+
+main h1{
+    text-align: center;
+    font-size: 2.9rem;
+}
+
+main section{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+main section h2{
+    font-size: 2.5rem;
+}
+main section p{
+    font-size: 2rem;
+}
+main button{
+    margin:2px 10px;
+    font-size: 2rem;
+}
