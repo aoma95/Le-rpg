@@ -10,7 +10,11 @@ class ClassHistoire {
             "e4c1":["Oui","e4c1"],
             "e4c2":["Non","e4c2"],
             "e5c1":["Attaquer la femme","e5c1"],
-            "e5c2":["Laisser la femme marcher dans le donjon","e5c1"]
+            "e5c2":["Laisser la femme marcher dans le donjon","e5c2"],
+            "e6c1":["L'esquiver","e6c1"],
+            "e6c2":["Contre-attaquer !","e6c2"],
+            "e7c1":["Récupérer son épée !","e7c1"],
+            "e7c2":["Utiliser la magie","e7c2"]
 
         };
         this.texte={
@@ -29,7 +33,11 @@ class ClassHistoire {
             //combat
             "cinqCombat":"Alors qu'il s'enfonce dans la forêt la jeune fille disparaît, il comprend alors que c'est piège et se fait attaquer de tous les côtés par différentes personnes, attaquant et magiciens. Il subit des coups et perd beaucoup d’énergie (Vie 100 à 65), endurance (50 à 20), c'est sous la fatigue de tous ses combattants qu'il s'écroule.",
             //combat
-            "cinq":"Il continue son avancée dans les terres sombres des plaines chinoises. Les jours et les nuits passent, le froid s'accentue de plus en plus. C'est au pied d'un feu de camp qu'il décide de s'entraîner. Pour ne pas perdre les capacités que lui ont appris les deux vieillards. C'est un arrivant dans un village, sans habitants, brumeux, qu'il se rendit compte de son arrivée. C'est avec garde qu'il s'aventure dans celui-ci. Au loin, caché dans la brume, il aperçoit un donjon, duquel ressort des bruits grinçants, des hurlements. C'est en fouillant les vieilles bâtissent du village qu'il se rend compte que tous les habitants ont précipitamment quittés les lieux. Surement dû aux personnes présentes dans le temple. Mais il se demande où sont passés chez personnes. Des bruits de pas apparaissent dans le seul chemin menant au donjon, aux recoins d'une fenêtre, il aperçoit une vieille femme, vêtue de noir avance vers celui-ci."
+            "cinq":"Il continue son avancée dans les terres sombres des plaines chinoises. Les jours et les nuits passent, le froid s'accentue de plus en plus. C'est au pied d'un feu de camp qu'il décide de s'entraîner. Pour ne pas perdre les capacités que lui ont appris les deux vieillards. C'est un arrivant dans un village, sans habitants, brumeux, qu'il se rendit compte de son arrivée. C'est avec garde qu'il s'aventure dans celui-ci. Au loin, caché dans la brume, il aperçoit un donjon, duquel ressort des bruits grinçants, des hurlements. C'est en fouillant les vieilles bâtissent du village qu'il se rend compte que tous les habitants ont précipitamment quittés les lieux. Surement dû aux personnes présentes dans le temple. Mais il se demande où sont passés chez personnes. Des bruits de pas apparaissent dans le seul chemin menant au donjon, aux recoins d'une fenêtre, il aperçoit une vieille femme, vêtue de noir avance vers celui-ci.",
+            "sixCombat":"Au risque d'alarmer de sa présence ? Il sort, enchaîne différents sorts de magie pour l'attaquer. Mais ceci n'est pas réel, les sort passent au travers d'elle sans l'affaiblir. C'est à ce moment-là que surgi un dragon. Malao recule sous le souffle du dragon, et perd de la vie. (Vie 100 à 80), (endurance 75 à 60), résistance (60 à 30). Il court pour sa cacher et reprendre son souffle, il sort derrière une maison, saute sur la tête du dragon l'assène de coup pour l'affaiblir, mais un coup de griffe lui ôta la vie.",
+            "six":"C'est de pas silencieux, que le donjon s'ouvre à lui. Un froid glaçant lui passe sur la peau. Il s'avance et tombe sur une pièce avec une seule sortie, s'enfonce et la porte se referme derrière lui. Une personne arrive en face de lui traînant une épée sur le sol. Il sait que le combat va avoir lui et n'as pas le choix que de gagner. Une rage s'empara de lui. Sorts, coup d'épée, il touche le guerrier. Celui-ci recule, et fonce sur Malao, que faire ?",
+            "sept":"Réussi l'esquive l'attaquer par-derrière d'un coup d'épée tranchant, c'est avec le bruit du guerrier tombant sur le sol qu'un bruit de porte s'ouvrant se fait entendre dans le fond brumeux de la pièce. Malao prend alors la direction de celle-ci. Une nouvelle pièce s'offre à lui. Dans cette pièce, deux feux étincelants illuminent cette immense pièce. Il observe et se demande ce que bien offrir cette immense salle. Il s'avance, marche, et des bruits de souffle se font entendre... Malao continue de s'avancer tout doucement au centre de la pièce et il sent que quelque chose l'observe. Il met la main sur son épée, prêt à sauter et esquiver ce qui l'observe. Au détour d'un regard dans le coin de la pièce qu'il aperçoit deux yeux jaune feu. C'est au moment de l'esquive que la queue du dragon lui fait perdre son épée. Que faire ?",
+            "septMort":"La contre-attaque envoi Malao contre le mur, ce qui le met KO et le guerrier en profite pour le tuer."
         };
         this.embranchementZero();
     }
@@ -75,7 +83,7 @@ class ClassHistoire {
                 this.embranchement(`${this.texte.deux}`,`${this.choix.e2c1[1]}`,`${this.choix.e2c1[0]}`,`${this.choix.e2c2[1]}`,`${this.choix.e2c2[0]}`);
             }
             if(event.target.className===`${this.choix.e1c1[1]}`){
-                this.embranchement(`${this.texte.deuxMort}`,`mort`,`Vous êtes mort !`)
+                this.embranchement(`${this.texte.deuxMort}`,`mort`,`Vous êtes mort !`);
             }
             if(event.target.className==="mort"){
                 this.clearMain();
@@ -83,17 +91,17 @@ class ClassHistoire {
             }
             if(event.target.className===`${this.choix.e2c1[1]}`){
                 //combat
-                this.embranchement(`${this.texte.troisComb}`,`combat`,`Lancez Combat !`)
+                this.embranchement(`${this.texte.troisComb}`,`combat`,`Lancez Combat !`);
             }
             if(event.target.className===`${this.choix.e2c2[1]}`){
                 //mise a jour compétence
                 this.embranchement(`${this.texte.trois}`,`${this.choix.e3c1[1]}`,`${this.choix.e3c1[0]}`,`${this.choix.e3c2[1]}`,`${this.choix.e3c2[0]}`);
             }
             if(event.target.className===`${this.choix.e3c1[1]}`){
-                this.embranchement(`${this.texte["quattreCombat1-1"]}`,`combat`,`Lancez Combat !`)
+                this.embranchement(`${this.texte["quattreCombat1-1"]}`,`combat`,`Lancez Combat !`);
             }
             if(event.target.className===`${this.choix.e3c2[1]}`){
-                this.embranchement(`${this.texte.quattre}`,`combate3c2`,`Lancez Combat !`)
+                this.embranchement(`${this.texte.quattre}`,`combate3c2`,`Lancez Combat !`);
             }
             if(event.target.className==="combate3c2"){
                 //mise a jour compétence
@@ -103,7 +111,16 @@ class ClassHistoire {
                 this.embranchement(`${this.texte.cinqCombat}`,`combate4c1`,`Combat`);
             }
             if(event.target.className===`${this.choix.e4c2[1]}`){
-                this.embranchement(`${this.texte.cinq}`,`${this.choix.e5c1[1]}`,`${this.choix.e5c1[0]}`,`${this.choix.e5c2[1]}`,`${this.choix.e5c2[0]}`)
+                this.embranchement(`${this.texte.cinq}`,`${this.choix.e5c1[1]}`,`${this.choix.e5c1[0]}`,`${this.choix.e5c2[1]}`,`${this.choix.e5c2[0]}`);
+            }
+            if(event.target.className===`${this.choix.e5c1[1]}`){
+                this.embranchement(`${this.texte.sixCombat}`,`combate5c1`,`Combat`,);
+            }
+            if(event.target.className===`${this.choix.e5c2[1]}`){
+                this.embranchement(`${this.texte.six}`,`${this.choix.e6c1[1]}`,`${this.choix.e6c1[0]}`,`${this.choix.e6c2[1]}`,`${this.choix.e6c2[0]}`);
+            }
+            if(event.target.className===`${this.choix.e6c1[1]}`){
+                this.embranchement(`${this.texte.septMort}`,`mort`,`mort`);
             }
         }));
     }
