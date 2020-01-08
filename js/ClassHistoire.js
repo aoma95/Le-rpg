@@ -13,7 +13,12 @@ class ClassHistoire {
             "e2c1":["Malao refuse d'écouter","e2c1"],
             "e2c2":["Malao écouta le vieillard","e2c2"],
             "e3c1":["Partir au combat l'épée au poing pour tuer ses maudits tortionnaires","e3c1"],
-            "e3c2":["Il se rend compte que la discrétion doit être de mise pour cette petite mission","e3c2"]
+            "e3c2":["Il se rend compte que la discrétion doit être de mise pour cette petite mission","e3c2"],
+            "e4c1":["Oui","e4c1"],
+            "e4c2":["Non","e4c2"],
+            "e5c1":["Attaquer la femme","e5c1"],
+            "e5c2":["Laisser la femme marcher dans le donjon","e5c1"]
+
         };
         this.texte={
             "un":"Un beau jour de soleil, pendant une virée en montagne, Malao s'enfonça dans une grotte de plus en plus sombre, froide et humide. Les dragons faisaient généralement leur nid dans de ce genre d'endroit à l'abris des chausseurs. Petit pas par petit pas il continue son chemin, son souffle et son poux sont de plus en plus fort. Malao ne voyait rien, seule la main sur le mur pouvait l'aider à avancer et à se situer dans la grotte... \n" +
@@ -76,9 +81,24 @@ class ClassHistoire {
                 "\n" +
                 "Celui-ci s'approche alors du jeune homme et lui explique qu'il est le descendant d'un grand sorcier et que coule dans son sang les gènes de ce sorcier. Mais que sans aide, il ne pourrait pas utiliser correctement sa magie et le vieux monsieur, à la barbe grisonnante lui indique être son maitre. \n" +
                 "\n" +
-                "Les jours se suivent et Malao apprend de mieux en mieux à gérer la force de sa magie. Les deux vieux hommes s'unissent pour un combat contre Malao.",
-            "quattre-2":", lui demandant de gagner ce combat, tout en réfléchissant à ses actes, coups."+"Le combat se déroule parfaitement bien, Malao se défend correctement et apprend de nouvelle technique d'esquive, apprend à mieux gérer son stress et sa magie."
-
+                "Les jours se suivent et Malao apprend de mieux en mieux à gérer la force de sa magie. Les deux vieux hommes s'unissent pour un combat contre Malao, lui demandant de gagner ce combat, tout en réfléchissant à ses actes, coups.",
+            "quattre-2":"Le combat se déroule parfaitement bien, Malao se défend correctement et apprend de nouvelle technique d'esquive, apprend à mieux gérer son stress et sa magie."+"Une fois ce combat finit, les hommes dines ensemble dans le temple devant la statue, autour d'un feu, dans le silence le plus totale. Le repos fait partie de l'apprentissage expliqua plus tôt le vieux mage. \n" +
+                "\n" +
+                "Un nouveau jour se lève. Les deux vieux messieurs donnent un manuscrit à Malao expliquant alors qu'une mission importante lui est adressée.  \n" +
+                "C'est avec une immense fierté que Malao accepte cette mission après avoir lu avec soin l'histoire écrite et expliqué. Une malle accompagne ce manuscrit, Malao l'ouvre avec soin et découvre dans celle-ci une tenue de mage. Une vieille tunique blanche, une paire de botte noire ainsi qu'un fourreau pour pouvoir ranger son épée. Il prit tout ça avec respect et s'habille. Il revient voir les deux vieillards et prit la route comme indiqué sur le manuscrit. \n" +
+                "\n" +
+                "C'est vers le nord que le jeune homme se dirige, dans les terres lointaines de la chine, là où se trouve le territoire de vieux magiciens pratiquant la magie noire. \n" +
+                "\n" +
+                "Sur le chemin il rencontre de nombreuses personnes lui demandant de l'aide. C'est avec la rencontre d'une jeune fille que ses pensées se chamboulent. \n" +
+                "Celle-ci lui indiqua que sa sœur est perdue dans la forêt.\n" +
+                "\n" +
+                "Doit-il accepter de l'aider ?",
+            //combat
+            "cinqCombat":"Alors qu'il s'enfonce dans la forêt la jeune fille disparait, il comprend alors que c'est piège et se fait attaquer de tous les côtés par différentes personnes, attaquant et magiciens. Il subit des coups et perd beaucoup d’énergie (Vie 100 à 65), endurance (50 à 20), c'est sous la fatigue de tous ses combattants qu'il s'écroule.",
+            //combat
+            "cinq":"il continue son avancer dans les terres sombres des plaines chinoises."+"Les jours et les nuits passent, le froid s'accentue de plus en plus. C'est au pied d'un feu de camp qu'il décide de s'entrainer. Pour ne pas perdre les capacités que lui ont appris les deux vieillards."+"C'est un arrivant dans un village, sans habitants, brumeux, qu'il se rendit compte de son arrivé. C'est avec garde qu'il s'aventure dans celui-ci. Au loin, caché dans la brume il aperçoit un donjon, duquel ressort des bruits grinçants, des hurlements. C'est en fouillant les vieilles bâtissent du village qu'il se rend compte que tous les habitants ont précipitamment quittés les lieux. Surement dû aux personnes présentes dans le temple. Mais il se demande où sont passés chez personnes. \n" +
+                "\n" +
+                "Des bruits de pas apparaisse dans le seul chemin menant au donjon, aux recoins d'une fenêtre, il aperçoit une vieille femme, vêtue de noir avance vers celui-ci.",
         };
         this.embranchementZero();
     }
@@ -120,32 +140,39 @@ class ClassHistoire {
     clicBoutonChoix(){
         $("main section button").click(( event => {
             this.clearSection();
-            if(event.target.className==="e1c2"){
+            if(event.target.className===`${this.choix.e1c2[1]}`){
                 this.embranchement(`${this.texte.deux}`,`${this.choix.e2c1[1]}`,`${this.choix.e2c1[0]}`,`${this.choix.e2c2[1]}`,`${this.choix.e2c2[0]}`);
             }
-            if(event.target.className==="e1c1"){
+            if(event.target.className===`${this.choix.e1c1[1]}`){
                 this.embranchement(`${this.texte.deuxMort}`,`mort`,`Vous êtes mort !`)
             }
             if(event.target.className==="mort"){
                 this.clearMain();
                 this.embranchementZero();
             }
-            if(event.target.className==="e2c1"){
+            if(event.target.className===`${this.choix.e2c1[1]}`){
                 //combat
                 this.embranchement(`${this.texte.troisComb}`,`combat`,`Lancez Combat !`)
             }
-            if(event.target.className==="e2c2"){
+            if(event.target.className===`${this.choix.e2c2[1]}`){
                 //mise a jour compétence
                 this.embranchement(`${this.texte.trois}`,`${this.choix.e3c1[1]}`,`${this.choix.e3c1[0]}`,`${this.choix.e3c2[1]}`,`${this.choix.e3c2[0]}`);
             }
-            if(event.target.className==="e3c1"){
+            if(event.target.className===`${this.choix.e3c1[1]}`){
                 this.embranchement(`${this.texte["quattreCombat1-1"]}`,`combat`,`Lancez Combat !`)
             }
-            if(event.target.className==="e3c2"){
+            if(event.target.className===`${this.choix.e3c2[1]}`){
                 this.embranchement(`${this.texte.quattre}`,`combate3c2`,`Lancez Combat !`)
             }
             if(event.target.className==="combate3c2"){
                 //mise a jour compétence
+                this.embranchement(`${this.texte["quattre-2"]}`,`${this.choix.e4c1[1]}`,`${this.choix.e4c1[0]}`,`${this.choix.e4c2[1]}`,`${this.choix.e4c2[0]}`);
+            }
+            if(event.target.className===`${this.choix.e4c1[1]}`){
+                this.embranchement(`${this.texte.cinqCombat}`,`combate4c1`,`Combat`);
+            }
+            if(event.target.className===`${this.choix.e4c2[1]}`){
+                this.embranchement(`${this.texte.cinq}`,`${this.choix.e5c1[1]}`,`${this.choix.e5c1[0]}`,`${this.choix.e5c2[1]}`,`${this.choix.e5c2[0]}`)
             }
         }));
     }
