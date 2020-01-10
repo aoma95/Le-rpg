@@ -10,10 +10,14 @@ header h1{
     text-align: center;
     font-size: 2.9rem;
 }
+main{
+    display: flex;
+    justify-content: space-between;
+}
 
 main section{
-    width: 70%;
-    margin: 0 auto;
+    width: 60%;
+    /*margin: 0 auto;*/
     text-align: center;
 }
 main section h2{
@@ -43,4 +47,22 @@ main button:hover{
 main button:active{
     position:relative;
     top:3px;
+}
+.hero{
+    width: 10%;
+    font-size: 1.9rem;
+    /*position: absolute;*/
+    margin-left: 10px;
+}
+.hero h3,.enemi h3{
+    text-align: center;
+}
+.enemi{
+    /*float: right;*/
+    width: 10%;
+    font-size: 1.9rem;
+    margin-right: 10px;
+}
+.cacher{
+    display: none;
 }

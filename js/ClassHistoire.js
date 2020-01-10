@@ -1,7 +1,11 @@
 class ClassHistoire {
     constructor(){
+        this.initHero();
+        this.creeInfoJoeueur();
+        this.afficherJoueur();
         this.intro="Née dans l'an 500 AP Jésus-Christ dans la zone montagneuse des **Huangshan**, fils du forgeron Meiwong, et de Jido, femme couturière, dans une époque ou règnes dragons et sorciers. L'école n'existait pas et les parents devaient garder eux-mêmes leurs enfants, c'est à la chaudronnerie ou travaille son père que Malao avec ses frères et sœurs grandissent. C'est donc dans la chaleur des fours, des chaudrons et sous le bruit du marteau claquant le métal froid des épées, haches, flèches que les enfants passent leur temps. Mais c'est à un autre destin que rêve le jeune garçon. Il passa son temps à regarder par la seule fenêtre les montagnes rocheuses de sa région. S'imaginant visiter chaque recoin à la découverte de lieux tout aussi fascinant les uns que les autres. Mais son père le rappela à l'ordre chaque jour lui en disant que le monde extérieur est peuplé de dragons et de sorciers maléfiques. Comme dans chaque famille, il existe toujours un enfant différent des autres. Malao était celui-là. Il travailla avec son père et ses frères en tant que chaudronnier jusqu'à ses 14 ans. C'est à partir de 15 ans qu'il s'enfuit de la chaudronnerie la journée pour visiter les montagnes de sa région et choisie alors son destin : celui d'aventurier.";
-        this.choix={"e1c1":"Malao décide de tout raconter à son père",
+        this.choix={
+            "e1c1":"Malao décide de tout raconter à son père",
             "e1c2":"Malao décide de mentir",
             "e2c1":"Malao refuse d'écouter",
             "e2c2":"Malao écouta le vieillard",
@@ -23,7 +27,6 @@ class ClassHistoire {
             "e10c2":"Non ne pas indiquer la sortie et Malao avance dans le donjon",
             "e11c1":"Malao implore ses deux maitres de combats",
             "e11c2":"Continuer à attaquer, malgré sa fatigue"
-
         };
         this.texte={
             "un":"Un beau jour de soleil, pendant une virée en montagne, Malao s'enfonça dans une grotte de plus en plus sombre, froide et humide. Les dragons faisaient généralement leur nid dans de ce genre d'endroit à l'abri des chausseurs. Petit pas par petit pas, il continue son chemin, son souffle et son pou sont de plus en plus fort. Malao ne voyait rien, seule la main sur le mur pouvait l'aider à avancer et à se situer dans la grotte... Mais, ne pouvant pas voir les obstacles sur le sol, il trébucha sur une roche en hurlant et en se cognant la tête. C'est alors qu'un bruit sourd retentit. Pris de panique Malao se relève en trompe et rebrousse chemin jusqu'à la chaudronnerie pour retrouver son père. Inquiet, son père lui demande ce qu'il s'est passé :",
@@ -57,10 +60,50 @@ class ClassHistoire {
             "finMauvaise":"Il enchaîne les coups d'épée, mais le sorcier l'affaiblit de plus en plus. Son rire le perturbe et l'énerve de plus en plus, il perd son contrôle et une rage s'empare de lui. C'est avec un enchaînement de ses mains qu'il assigne plusieurs coups de magie tout en avançant vers le sorcier, qui d'un sort, s'empare de lui. Malao se sent pris au piège. Le sorcier rigole de plus en plus disant : Tu es fini jeune combattant, cela me rappelle un combat déjà gagné hahaha. L’âme de Malao fut aspirée par le sorcier par la suite et il s'écroula sur le sol."
         };
         this.embranchementZero();
+        this.creeEspaceCombat();
+        this.creeInfoEnemi();
+        this.swap();
+    }
+    initHero(){
+        const nom="Malao";
+        const pv=100;
+        const force=50;
+        const resistance=50;
+        const magi=0;
+        const endurance=50;
+        this.hero =new ClassHero(nom,pv,force,resistance,magi,endurance);
+    }
+    creeInfoJoeueur(){
+        $('main').append(`<article class="hero"></article>`);
+    }
+    swap(){
+        $('main section.EspaceCombat').toggleClass('cacher');
+        $('main section:nth-of-type(1)').toggleClass('cacher');
+    }
+    creeInfoEnemi(){
+        $('main').append(`<article class="enemi"></article>`);
+    }
+
+    creeEspaceCombat(){
+        $('main').append("<section class='EspaceCombat'></section>")
+    }
+
+    afficherJoueur(){
+        $('.hero').empty();
+        $('.hero').append(`<h3>${this.hero.nom}</h3>
+        <ul>
+            <li>Point de vie : ${this.hero.pv}</li>
+            <li>Force : ${this.hero.force}</li>
+            <li>Magie : ${this.hero.magi}</li>
+            <li>Résistance : ${this.hero.resistance}</li>
+            <li>Endurance : ${this.hero.endurance}</li>
+        </ul>
+        <p>${this.rechercherkeySpell("Donne un Gros coup mais perd 15 d'endurance")} : ${this.hero.spell["Attaque Lourde"]}</p>
+        <p>${this.rechercherkeySpell("Donne un coup normal perd 2 d'endurance")} : ${this.hero.spell["Attaque légère"]}</p>`)
     }
 
     embranchementZero(){
-        $("main").append("<section></section>");
+        $("main").append("<section class='cacher'></section>");
         $('main section').append(`<h2>${this.intro}</h2>`);
         $('main section').append("<button class='debut'>Début</button>");
         $(".debut").click(( event => {
@@ -68,7 +111,9 @@ class ClassHistoire {
             this.embranchement(`${this.texte.un}`,`${this.rechercheKey(this.choix.e1c1)}`,`${this.choix.e1c1}`,`${this.rechercheKey(this.choix.e1c2)}`,`${this.choix.e1c2}`);
         }));
     }
-
+    rechercherkeySpell(value){
+        return Object.keys(this.hero.spell).find(key => this.hero.spell[key] === value);
+    }
     rechercheKey(value) {
         return Object.keys(this.choix).find(key => this.choix[key] === value);
     }
@@ -101,18 +146,31 @@ class ClassHistoire {
         $("main section button").click(( event => {
             this.clearSection();
             if(event.target.className===`${this.rechercheKey(this.choix.e1c2)}`){
+
                 this.embranchement(`${this.texte.deux}`,`${this.rechercheKey(this.choix.e2c1)}`,`${this.choix.e2c1}`,`${this.rechercheKey(this.choix.e2c2)}`,`${this.choix.e2c2}`);
             }
             if(event.target.className===`${this.rechercheKey(this.choix.e1c1)}`){
+                this.hero.mort();
+                this.afficherJoueur();
                 this.embranchement(`${this.texte.deuxMort}`,`mort`,`Vous êtes mort !`);
             }
             if(event.target.className==="mort"){
                 this.clearMain();
+                this.initHero();
+                this.creeInfoJoeueur();
+                this.afficherJoueur();
                 this.embranchementZero();
+                this.creeEspaceCombat();
+                this.creeInfoEnemi();
+                this.swap();
             }
             if(event.target.className===`${this.rechercheKey(this.choix.e2c1)}`){
                 //combat
-                this.embranchement(`${this.texte.troisComb}`,`combat`,`Lancez Combat !`);
+                this.embranchement(`${this.texte.troisComb}`,`combate2c1`,`Lancez Combat !`);
+            }
+            if(event.target.className===`combate2c1`){
+                let enemi = new ClassPersonnage('Bande malsain','10000','10','40');
+                let combat1 = new ClassCombat(this.hero,enemi);
             }
             if(event.target.className===`${this.rechercheKey(this.choix.e2c2)}`){
                 //mise a jour compétence
