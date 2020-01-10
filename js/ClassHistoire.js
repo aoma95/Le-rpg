@@ -1,20 +1,28 @@
 class ClassHistoire {
     constructor(){
         this.intro="Née dans l'an 500 AP Jésus-Christ dans la zone montagneuse des **Huangshan**, fils du forgeron Meiwong, et de Jido, femme couturière, dans une époque ou règnes dragons et sorciers. L'école n'existait pas et les parents devaient garder eux-mêmes leurs enfants, c'est à la chaudronnerie ou travaille son père que Malao avec ses frères et sœurs grandissent. C'est donc dans la chaleur des fours, des chaudrons et sous le bruit du marteau claquant le métal froid des épées, haches, flèches que les enfants passent leur temps. Mais c'est à un autre destin que rêve le jeune garçon. Il passa son temps à regarder par la seule fenêtre les montagnes rocheuses de sa région. S'imaginant visiter chaque recoin à la découverte de lieux tout aussi fascinant les uns que les autres. Mais son père le rappela à l'ordre chaque jour lui en disant que le monde extérieur est peuplé de dragons et de sorciers maléfiques. Comme dans chaque famille, il existe toujours un enfant différent des autres. Malao était celui-là. Il travailla avec son père et ses frères en tant que chaudronnier jusqu'à ses 14 ans. C'est à partir de 15 ans qu'il s'enfuit de la chaudronnerie la journée pour visiter les montagnes de sa région et choisie alors son destin : celui d'aventurier.";
-        this.choix={"e1c1":["Malao décide de tout raconter à son père","e1c1"],
-            "e1c2":["Malao décide de mentir","e1c2"],
-            "e2c1":["Malao refuse d'écouter","e2c1"],
-            "e2c2":["Malao écouta le vieillard","e2c2"],
-            "e3c1":["Partir au combat l'épée au poing pour tuer ses maudits tortionnaires","e3c1"],
-            "e3c2":["Il se rend compte que la discrétion doit être de mise pour cette petite mission","e3c2"],
-            "e4c1":["Oui","e4c1"],
-            "e4c2":["Non","e4c2"],
-            "e5c1":["Attaquer la femme","e5c1"],
-            "e5c2":["Laisser la femme marcher dans le donjon","e5c2"],
-            "e6c1":["L'esquiver","e6c1"],
-            "e6c2":["Contre-attaquer !","e6c2"],
-            "e7c1":["Récupérer son épée !","e7c1"],
-            "e7c2":["Utiliser la magie","e7c2"]
+        this.choix={"e1c1":"Malao décide de tout raconter à son père",
+            "e1c2":"Malao décide de mentir",
+            "e2c1":"Malao refuse d'écouter",
+            "e2c2":"Malao écouta le vieillard",
+            "e3c1":"Partir au combat l'épée au poing pour tuer ses maudits tortionnaires",
+            "e3c2":"Il se rend compte que la discrétion doit être de mise pour cette petite mission",
+            "e4c1":"Oui",
+            "e4c2":"Non",
+            "e5c1":"Attaquer la femme",
+            "e5c2":"Laisser la femme marcher dans le donjon",
+            "e6c1":"L'esquiver",
+            "e6c2":"Contre-attaquer !",
+            "e7c1":"Récupérer son épée !",
+            "e7c2":"Utiliser la magie",
+            "e8c1":"Choisir la porte de droite",
+            "e8c2":"Choisir la porte de gauche",
+            "e9c1":"Casser les statues avec son épée et de la magie",
+            "e9c2":"Avancer sans prendre compte des statues",
+            "e10c1":"Oui indiquer la sortie ,Malao gagne en respect et en sagesse",
+            "e10c2":"Non ne pas indiquer la sortie et Malao avance dans le donjon",
+            "e11c1":"Malao implore ses deux maitres de combats",
+            "e11c2":"Continuer à attaquer, malgré sa fatigue"
 
         };
         this.texte={
@@ -37,7 +45,16 @@ class ClassHistoire {
             "sixCombat":"Au risque d'alarmer de sa présence ? Il sort, enchaîne différents sorts de magie pour l'attaquer. Mais ceci n'est pas réel, les sort passent au travers d'elle sans l'affaiblir. C'est à ce moment-là que surgi un dragon. Malao recule sous le souffle du dragon, et perd de la vie. (Vie 100 à 80), (endurance 75 à 60), résistance (60 à 30). Il court pour sa cacher et reprendre son souffle, il sort derrière une maison, saute sur la tête du dragon l'assène de coup pour l'affaiblir, mais un coup de griffe lui ôta la vie.",
             "six":"C'est de pas silencieux, que le donjon s'ouvre à lui. Un froid glaçant lui passe sur la peau. Il s'avance et tombe sur une pièce avec une seule sortie, s'enfonce et la porte se referme derrière lui. Une personne arrive en face de lui traînant une épée sur le sol. Il sait que le combat va avoir lui et n'as pas le choix que de gagner. Une rage s'empara de lui. Sorts, coup d'épée, il touche le guerrier. Celui-ci recule, et fonce sur Malao, que faire ?",
             "sept":"Réussi l'esquive l'attaquer par-derrière d'un coup d'épée tranchant, c'est avec le bruit du guerrier tombant sur le sol qu'un bruit de porte s'ouvrant se fait entendre dans le fond brumeux de la pièce. Malao prend alors la direction de celle-ci. Une nouvelle pièce s'offre à lui. Dans cette pièce, deux feux étincelants illuminent cette immense pièce. Il observe et se demande ce que bien offrir cette immense salle. Il s'avance, marche, et des bruits de souffle se font entendre... Malao continue de s'avancer tout doucement au centre de la pièce et il sent que quelque chose l'observe. Il met la main sur son épée, prêt à sauter et esquiver ce qui l'observe. Au détour d'un regard dans le coin de la pièce qu'il aperçoit deux yeux jaune feu. C'est au moment de l'esquive que la queue du dragon lui fait perdre son épée. Que faire ?",
-            "septMort":"La contre-attaque envoi Malao contre le mur, ce qui le met KO et le guerrier en profite pour le tuer."
+            "septMort":"La contre-attaque envoi Malao contre le mur, ce qui le met KO et le guerrier en profite pour le tuer.",
+            "huitMort":"C'est en courant sur son épée que le dragon lance un souffle de feu et brûle Malao.",
+            "huit":"Malao recentre ses mains, se concentre, le dragon se retourne, Malao se retrouve dans le vide et c'est alors qu'il envoie différents sort de magie, le dragon est affaibli. Le dragon pousse un cri et s'envole. Malao concentre alors sa puissance sur un faisceau lumineux cassant la toiture qui tombe sur le dragon et le tue. Malao s'écroule et reprend son souffle, deux bruits de portes se font entendre. Il sent que les statuts ne sont pas bienveillants. Plusieurs choix s’offrent à lui :",
+            "neufMort":"En franchissant la porte de gauche la salle se referma avec des piques et Malao succomba.",
+            "neuf":"C'est en franchissant la porte de droite que Malao continue de s'enfonçait dans le donjon. Une chaleur étouffante vient remplacer le froid de l'entrée. Dans une allée sombre, des statuts de pierre l'accueil. Fatigué, il sent un mauvais pressentiment.",
+            "dixCombat":"Une fois, la pièce traversait, Malao se rend compte que quelque chose ne va pas, différent bruit de pierre se font entendre, se retourne et s'aperçoit que les statues se sont armées et se sont placées en face de lui et l'achaine de coups.",
+            "dix":"Malao s'empare donc de la puissance des statuts, la sensation d'une magie puissante se fait sentir en lui. Il continue d'avancer, des escaliers se présente à lui et monte à l'étage. Un rire maléfique se fait entendre chaque fois que le jeune Malao s'enfonce dans le donjon. Au détour d'une pièce, il aperçoit des gens enchaînés. Est-ce un piège se demande-t-il ? Il réfléchit :",
+            "onze":"C'est en entrant dans la dernière pièce, que la rencontre avec une personne l'attendant autour d'un feu. Malao sent une aura maléfique dans la salle. S'avance doucement quand cet homme se met à parler :\"Je t'attendais depuis tellement longtemps, si tu es là, c'est que tu es bien de la puissance de ton ancêtre.\"Malao sort son épée et met en garde cet homme. Celui-ci recule et s'envole. Le vieil homme lança plusieurs sorts de magie, tous esquivé par Malao, il contre-attaque avec des sors de magie également. Malao sent que cet homme est extrêmement puissant et que ses attaques lui font peu de dégâts. Que faire, se dit-il ?",
+            "finBonne":"Il entre alors dans une méditation, une aura verte s'empare de lui, et deux rayons lumineux traverse le toit de la pièce pour se positionner à côté de lui. C'est alors que les voix de ses maîtres se font entendre dans sa tête. Il sent sa puissance augmenter et se sent prêt pour affronter et tuer ce magicien noir. Il avance, et enchaîne les boules de magie, différentes esquives par son adversaire détruise le bâtiment. Malao se concentre de nouveau et jette un coup de magie assassin sur son adversaire. Une fois celui-ci abattu, Malao redescend sur le sol et les voix de ses maîtres disparaisse. Une fois le combat gagné, la ville regagne de la lumière, femme et enfant le salut en le remerciant.",
+            "finMauvaise":"Il enchaîne les coups d'épée, mais le sorcier l'affaiblit de plus en plus. Son rire le perturbe et l'énerve de plus en plus, il perd son contrôle et une rage s'empare de lui. C'est avec un enchaînement de ses mains qu'il assigne plusieurs coups de magie tout en avançant vers le sorcier, qui d'un sort, s'empare de lui. Malao se sent pris au piège. Le sorcier rigole de plus en plus disant : Tu es fini jeune combattant, cela me rappelle un combat déjà gagné hahaha. L’âme de Malao fut aspirée par le sorcier par la suite et il s'écroula sur le sol."
         };
         this.embranchementZero();
     }
@@ -48,8 +65,12 @@ class ClassHistoire {
         $('main section').append("<button class='debut'>Début</button>");
         $(".debut").click(( event => {
             this.clearSection();
-            this.embranchement(`${this.texte.un}`,`${this.choix.e1c1[1]}`,`${this.choix.e1c1[0]}`,`${this.choix.e1c2[1]}`,`${this.choix.e1c2[0]}`);
+            this.embranchement(`${this.texte.un}`,`${this.rechercheKey(this.choix.e1c1)}`,`${this.choix.e1c1}`,`${this.rechercheKey(this.choix.e1c2)}`,`${this.choix.e1c2}`);
         }));
+    }
+
+    rechercheKey(value) {
+        return Object.keys(this.choix).find(key => this.choix[key] === value);
     }
 
     embranchement(texte,classeUn ="",phraseButonUn="",classedeux ="",PhraseButonDeux=""){
@@ -79,48 +100,82 @@ class ClassHistoire {
     clicBoutonChoix(){
         $("main section button").click(( event => {
             this.clearSection();
-            if(event.target.className===`${this.choix.e1c2[1]}`){
-                this.embranchement(`${this.texte.deux}`,`${this.choix.e2c1[1]}`,`${this.choix.e2c1[0]}`,`${this.choix.e2c2[1]}`,`${this.choix.e2c2[0]}`);
+            if(event.target.className===`${this.rechercheKey(this.choix.e1c2)}`){
+                this.embranchement(`${this.texte.deux}`,`${this.rechercheKey(this.choix.e2c1)}`,`${this.choix.e2c1}`,`${this.rechercheKey(this.choix.e2c2)}`,`${this.choix.e2c2}`);
             }
-            if(event.target.className===`${this.choix.e1c1[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e1c1)}`){
                 this.embranchement(`${this.texte.deuxMort}`,`mort`,`Vous êtes mort !`);
             }
             if(event.target.className==="mort"){
                 this.clearMain();
                 this.embranchementZero();
             }
-            if(event.target.className===`${this.choix.e2c1[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e2c1)}`){
                 //combat
                 this.embranchement(`${this.texte.troisComb}`,`combat`,`Lancez Combat !`);
             }
-            if(event.target.className===`${this.choix.e2c2[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e2c2)}`){
                 //mise a jour compétence
-                this.embranchement(`${this.texte.trois}`,`${this.choix.e3c1[1]}`,`${this.choix.e3c1[0]}`,`${this.choix.e3c2[1]}`,`${this.choix.e3c2[0]}`);
+                this.embranchement(`${this.texte.trois}`,`${this.rechercheKey(this.choix.e3c1)}`,`${this.choix.e3c1}`,`${this.rechercheKey(this.choix.e3c2)}`,`${this.choix.e3c2}`);
             }
-            if(event.target.className===`${this.choix.e3c1[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e3c1)}`){
                 this.embranchement(`${this.texte["quattreCombat1-1"]}`,`combat`,`Lancez Combat !`);
             }
-            if(event.target.className===`${this.choix.e3c2[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e3c2)}`){
                 this.embranchement(`${this.texte.quattre}`,`combate3c2`,`Lancez Combat !`);
             }
             if(event.target.className==="combate3c2"){
                 //mise a jour compétence
-                this.embranchement(`${this.texte["quattre-2"]}`,`${this.choix.e4c1[1]}`,`${this.choix.e4c1[0]}`,`${this.choix.e4c2[1]}`,`${this.choix.e4c2[0]}`);
+                this.embranchement(`${this.texte["quattre-2"]}`,`${this.rechercheKey(this.choix.e4c1)}`,`${this.choix.e4c1}`,`${this.rechercheKey(this.choix.e4c2)}`,`${this.choix.e4c2}`);
             }
-            if(event.target.className===`${this.choix.e4c1[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e4c1)}`){
                 this.embranchement(`${this.texte.cinqCombat}`,`combate4c1`,`Combat`);
             }
-            if(event.target.className===`${this.choix.e4c2[1]}`){
-                this.embranchement(`${this.texte.cinq}`,`${this.choix.e5c1[1]}`,`${this.choix.e5c1[0]}`,`${this.choix.e5c2[1]}`,`${this.choix.e5c2[0]}`);
+            if(event.target.className===`${this.rechercheKey(this.choix.e4c2)}`){
+                this.embranchement(`${this.texte.cinq}`,`${this.rechercheKey(this.choix.e5c1)}`,`${this.choix.e5c1}`,`${this.rechercheKey(this.choix.e5c2)}`,`${this.choix.e5c2}`);
             }
-            if(event.target.className===`${this.choix.e5c1[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e5c1)}`){
                 this.embranchement(`${this.texte.sixCombat}`,`combate5c1`,`Combat`,);
             }
-            if(event.target.className===`${this.choix.e5c2[1]}`){
-                this.embranchement(`${this.texte.six}`,`${this.choix.e6c1[1]}`,`${this.choix.e6c1[0]}`,`${this.choix.e6c2[1]}`,`${this.choix.e6c2[0]}`);
+            if(event.target.className===`${this.rechercheKey(this.choix.e5c2)}`){
+                this.embranchement(`${this.texte.six}`,`${this.rechercheKey(this.choix.e6c1)}`,`${this.choix.e6c1}`,`${this.rechercheKey(this.choix.e6c2)}`,`${this.choix.e6c2}`);
             }
-            if(event.target.className===`${this.choix.e6c1[1]}`){
+            if(event.target.className===`${this.rechercheKey(this.choix.e6c2)}`){
                 this.embranchement(`${this.texte.septMort}`,`mort`,`mort`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e6c1)}`){
+                this.embranchement(`${this.texte.sept}`,`${this.rechercheKey(this.choix.e7c1)}`,`${this.choix.e7c1}`,`${this.rechercheKey(this.choix.e7c2)}`,`${this.choix.e7c2}`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e7c2)}`){
+                this.embranchement(`${this.texte.huit}`,`${this.rechercheKey(this.choix.e8c1)}`,`${this.choix.e8c1}`,`${this.rechercheKey(this.choix.e8c2)}`,`${this.choix.e8c2}`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e7c1)}`){
+                this.embranchement(`${this.texte.huitMort}`,`mort`,`mort`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e8c1)}`){
+                this.embranchement(`${this.texte.neuf}`,`${this.rechercheKey(this.choix.e9c1)}`,`${this.choix.e9c1}`,`${this.rechercheKey(this.choix.e9c2)}`,`${this.choix.e9c2}`);
+
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e8c2)}`){
+                this.embranchement(`${this.texte.neufMort}`,`mort`,`mort`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e9c1)}`){
+                this.embranchement(`${this.texte.dix}`,`${this.rechercheKey(this.choix.e10c1)}`,`${this.choix.e10c1}`,`${this.rechercheKey(this.choix.e10c2)}`,`${this.choix.e10c2}`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e9c2)}`){
+                this.embranchement(`${this.texte.dixCombat}`,`combat`,`Combat`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e10c1)}`){
+                this.embranchement(`${this.texte.onze}`,`${this.rechercheKey(this.choix.e11c1)}`,`${this.choix.e11c1}`,`${this.rechercheKey(this.choix.e11c2)}`,`${this.choix.e11c2}`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e10c2)}`){
+                this.embranchement(`${this.texte.onze}`,`${this.rechercheKey(this.choix.e11c1)}`,`${this.choix.e11c1}`,`${this.rechercheKey(this.choix.e11c2)}`,`${this.choix.e11c2}`);
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e11c1)}`){
+                //combat
+            }
+            if(event.target.className===`${this.rechercheKey(this.choix.e11c2)}`){
+                //combat
             }
         }));
     }
