@@ -4,6 +4,7 @@ class ClassHero extends ClassPersonnage {
         this.spell={
           "Attaque lourde":"Donne un Gros coup mais perd 15 d'endurance",
             "Attaque légère":"Donne un coup normal perd 2 d'endurance",
+            "Cannon à Ki":"Fait des dégat perd 20 de magie"
         };
         this._magi = magi;
         this._endurance = endurance;
@@ -11,7 +12,8 @@ class ClassHero extends ClassPersonnage {
     attaque(cible,typeAttaque) {
         if (this._endurance>=2) {
             if (typeAttaque === "Attaque Lourde"&&this.getEndurance()>=15) {
-                cible.setPv( cible.getPv() - (this.getForce() * Math.floor(Math.random() * 6) + 3));
+                let attaque = this.getForce() * Math.floor(Math.random() * 6) + 3;
+                cible.setPv( cible.getPv() - attaque);
                 this.setEndurance(this.getEndurance()-15);
             }
             if (typeAttaque === "Attaque légère") {
@@ -19,7 +21,14 @@ class ClassHero extends ClassPersonnage {
                 this.setEndurance(this.getEndurance()-2);
             }
         }
+        if(this._magi>=20) {
+            if (typeAttaque === "Cannon à Ki") {
+                cible.setPv(cible.getPv()-200);
+                this.setMagi(this.getMagi()-20)
+            }
+        }
     }
+
     getMagi() {
         return this._magi;
     }
