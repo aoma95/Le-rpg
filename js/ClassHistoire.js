@@ -92,13 +92,13 @@ class ClassHistoire {
         $('.hero').empty();
         $('.hero').append(`<h3>${this.hero.nom}</h3>
         <ul>
-            <li>Point de vie : ${this.hero.pv}</li>
-            <li>Force : ${this.hero.force}</li>
-            <li>Magie : ${this.hero.magi}</li>
-            <li>Résistance : ${this.hero.resistance}</li>
-            <li>Endurance : ${this.hero.endurance}</li>
+            <li>Point de vie : ${this.hero.getPv()}</li>
+            <li>Force : ${this.hero.getForce()}</li>
+            <li>Magie : ${this.hero.getMagi()}</li>
+            <li>Résistance : ${this.hero.getResistance()}</li>
+            <li>Endurance : ${this.hero.getEndurance()}</li>
         </ul>
-        <p>${this.rechercherkeySpell("Donne un Gros coup mais perd 15 d'endurance")} : ${this.hero.spell["Attaque Lourde"]}</p>
+        <p>${this.rechercherkeySpell("Donne un Gros coup mais perd 15 d'endurance")} : ${this.hero.spell["Attaque lourde"]}</p>
         <p>${this.rechercherkeySpell("Donne un coup normal perd 2 d'endurance")} : ${this.hero.spell["Attaque légère"]}</p>`)
     }
 
@@ -169,6 +169,7 @@ class ClassHistoire {
                 this.embranchement(`${this.texte.troisComb}`,`combate2c1`,`Lancez Combat !`);
             }
             if(event.target.className===`combate2c1`){
+                this.swap();
                 let enemi = new ClassPersonnage('Bande malsain','10000','10','40');
                 let combat1 = new ClassCombat(this.hero,enemi);
             }
