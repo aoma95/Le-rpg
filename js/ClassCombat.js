@@ -35,7 +35,7 @@ class ClassCombat {
             $('.EspaceCombat').append(`<p>Pas assez de force pour taper</p><button class="passer">Passer</button>`);
         }
         if(this.adversaire1.getMagi()>0){
-            $('.EspaceCombat').append(`<button class="magi">Cannon à Ki</button>`);
+            $('.EspaceCombat').append(`<button class="magi">Canon à Ki</button>`);
         }
         this.clicBoutonSort()
 
@@ -54,7 +54,7 @@ class ClassCombat {
             if (event.target.className === "passer") {
             }
             if (event.target.className === "magi") {
-                this.adversaire1.attaque(this.adversaire2, "Cannon à Ki");
+                this.adversaire1.attaque(this.adversaire2, "Canon à Ki");
             }
             this.afficheEnemi();
             this.afficherJoueur();
@@ -96,7 +96,7 @@ class ClassCombat {
         </ul>
         <p>${this.rechercherkeySpell("Donne un Gros coup mais perd 15 d'endurance")} : ${this.adversaire1.spell["Attaque lourde"]}</p>
         <p>${this.rechercherkeySpell("Donne un coup normal perd 2 d'endurance")} : ${this.adversaire1.spell["Attaque légère"]}</p>
-        <p>${this.rechercherkeySpell("Fait des dégat perd 20 de magie")} : ${this.adversaire1.spell["Cannon à Ki"]}</p>`)
+        <p>${this.rechercherkeySpell("Fait des dégat perd 20 de magie")} : ${this.adversaire1.spell["Canon à Ki"]}</p>`)
     }
     mortJoueur(){
         $('.EspaceCombat').empty();

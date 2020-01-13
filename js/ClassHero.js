@@ -4,7 +4,7 @@ class ClassHero extends ClassPersonnage {
         this.spell={
           "Attaque lourde":"Donne un Gros coup mais perd 15 d'endurance",
             "Attaque légère":"Donne un coup normal perd 2 d'endurance",
-            "Cannon à Ki":"Fait des dégat perd 20 de magie"
+            "Canon à Ki":"Fait des dégat perd 20 de magie"
         };
         this._magi = magi;
         this._endurance = endurance;
@@ -22,7 +22,7 @@ class ClassHero extends ClassPersonnage {
             }
         }
         if(this._magi>=20) {
-            if (typeAttaque === "Cannon à Ki") {
+            if (typeAttaque === "Canon à Ki") {
                 cible.setPv(cible.getPv()-200);
                 this.setMagi(this.getMagi()-20)
             }

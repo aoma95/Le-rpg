@@ -1,6 +1,6 @@
 class ClassHistoire {
     constructor(){
-        this.intro="Née dans l'an 500 AP Jésus-Christ dans la zone montagneuse des **Huangshan**, fils du forgeron Meiwong, et de Jido, femme couturière, dans une époque ou règnes dragons et sorciers. L'école n'existait pas et les parents devaient garder eux-mêmes leurs enfants, c'est à la chaudronnerie ou travaille son père que Malao avec ses frères et sœurs grandissent. C'est donc dans la chaleur des fours, des chaudrons et sous le bruit du marteau claquant le métal froid des épées, haches, flèches que les enfants passent leur temps. Mais c'est à un autre destin que rêve le jeune garçon. Il passa son temps à regarder par la seule fenêtre les montagnes rocheuses de sa région. S'imaginant visiter chaque recoin à la découverte de lieux tout aussi fascinant les uns que les autres. Mais son père le rappela à l'ordre chaque jour lui en disant que le monde extérieur est peuplé de dragons et de sorciers maléfiques. Comme dans chaque famille, il existe toujours un enfant différent des autres. Malao était celui-là. Il travailla avec son père et ses frères en tant que chaudronnier jusqu'à ses 14 ans. C'est à partir de 15 ans qu'il s'enfuit de la chaudronnerie la journée pour visiter les montagnes de sa région et choisie alors son destin : celui d'aventurier.";
+        this.intro="Née dans l'an 500 AP Jésus-Christ dans la zone montagneuse des Huangshan, fils du forgeron Meiwong, et de Jido, femme couturière, dans une époque ou règnes dragons et sorciers. L'école n'existait pas et les parents devaient garder eux-mêmes leurs enfants, c'est à la chaudronnerie ou travaille son père que Malao avec ses frères et sœurs grandissent. C'est donc dans la chaleur des fours, des chaudrons et sous le bruit du marteau claquant le métal froid des épées, haches, flèches que les enfants passent leur temps. Mais c'est à un autre destin que rêve le jeune garçon. Il passa son temps à regarder par la seule fenêtre les montagnes rocheuses de sa région. S'imaginant visiter chaque recoin à la découverte de lieux tout aussi fascinant les uns que les autres. Mais son père le rappela à l'ordre chaque jour lui en disant que le monde extérieur est peuplé de dragons et de sorciers maléfiques. Comme dans chaque famille, il existe toujours un enfant différent des autres. Malao était celui-là. Il travailla avec son père et ses frères en tant que chaudronnier jusqu'à ses 14 ans. C'est à partir de 15 ans qu'il s'enfuit de la chaudronnerie la journée pour visiter les montagnes de sa région et choisie alors son destin : celui d'aventurier.";
         this.choix={
             "e1c1":"Malao décide de tout raconter à son père",
             "e1c2":"Malao décide de mentir",
@@ -101,7 +101,7 @@ class ClassHistoire {
         </ul>
         <p>${this.rechercherkeySpell("Donne un Gros coup mais perd 15 d'endurance")} : ${this.hero.spell["Attaque lourde"]}</p>
         <p>${this.rechercherkeySpell("Donne un coup normal perd 2 d'endurance")} : ${this.hero.spell["Attaque légère"]}</p>
-        <p>${this.rechercherkeySpell("Fait des dégat perd 20 de magie")} : ${this.hero.spell["Cannon a Ki"]}</p>`)
+        <p>${this.rechercherkeySpell("Fait des dégat perd 20 de magie")} : ${this.hero.spell["Canon à Ki"]}</p>`)
     }
 
     embranchementZero(){
