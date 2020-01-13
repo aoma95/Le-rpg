@@ -96,7 +96,7 @@ class ClassCombat {
         </ul>
         <p>${this.rechercherkeySpell("Donne un Gros coup mais perd 15 d'endurance")} : ${this.adversaire1.spell["Attaque lourde"]}</p>
         <p>${this.rechercherkeySpell("Donne un coup normal perd 2 d'endurance")} : ${this.adversaire1.spell["Attaque légère"]}</p>
-        <p>${this.rechercherkeySpell("Fait des dégat perd 20 de magie")} : ${this.adversaire1.spell["Cannon a Ki"]}</p>`)
+        <p>${this.rechercherkeySpell("Fait des dégat perd 20 de magie")} : ${this.adversaire1.spell["Cannon à Ki"]}</p>`)
     }
     mortJoueur(){
         $('.EspaceCombat').empty();
